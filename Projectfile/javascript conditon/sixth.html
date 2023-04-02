@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Write a logic to create a game called Guess the Number. 
+Computers generate a Random Number.
+User will try to guess a number, if Guess is Correct, Print Msg "User Won" 
+User has three change to guess the number, if Fails, Print Msg "User Lose" -->
+
+</head>
+<body>
+<script>
+ var usernumber;
+ var chances = 0;
+ var maxchances = 3;
+ var randomNumber = Math.floor(Math.random()*10)+ 1;
+ console.log(randomNumber)
+
+ while(chances > maxchances)
+ {
+   usernumber = parseInt(prompt("Guess the number 1 to 10"))
+    if(usernumber == randomNumber){
+        document.write("User won")
+        break;
+    }
+    else{
+        chances++;
+    }
+    if(chances === maxchances){
+       document.write("User Lose")
+    }
+ }
+</script>
+</body>
+</html> 
